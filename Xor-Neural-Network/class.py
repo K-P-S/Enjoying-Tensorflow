@@ -31,7 +31,6 @@ def tanh_prime(x):
 #training function
 #takes five parameters: input data, transpose, layer 1, layer 2, bias 1, bias 2
 def train(x, t, V, W, bv, bw):
-  
   #forard propogation; matrix multiply + biases
   A = np.dot(x, V) + bv
   Z = np.tanh(A) #first activation func
@@ -50,7 +49,6 @@ def train(x, t, V, W, bv, bw):
   loss = -np.mean(t * np.log(Y) + (1 - t) * np.log(1-Y))
   
   return loss, (dV, dW, Ev, Ew)
-
 
 def predict(x, V, W, bv, bw):
   A = np.dot(x, V) + bv
