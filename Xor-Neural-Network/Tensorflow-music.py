@@ -32,7 +32,7 @@ def build_network(self):
   with tf.name_scope('placeholder_targets'):
     self.targets = [
       tf.placeholder(
-      tf.int32) #0 or 1
+      tf.int32, #0 or 1
       [self.batch_size],
       name = 'target')
     ]
